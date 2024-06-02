@@ -1,0 +1,121 @@
+$background: #202124;
+$text-color: white;
+
+body {
+    height: 100vh;
+    background-color: $background;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navigation {
+    display: inline-block;
+    height: 60px;
+    padding: 6px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 92px;
+    height: calc(100% - 560px);
+    max-height: 290px;
+
+    div {
+        margin-top: auto;
+    }
+}
+
+.search-box {
+    display: flex;
+    min-height: 44px;
+    background-color: $background;
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    max-width: 590px;
+
+    .search-icon {
+        display: flex;
+        align-items: center;
+        padding-left: 14px;
+        padding-right: 13px;
+        height: 46px;
+
+        svg {
+            fill: currentColor;
+            color: #9aa0a6;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    input {
+        outline: none;
+
+        &[type="text"] {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            color: #e8eaed;
+            line-height: 22px;
+            font-size: 16px;
+            padding-bottom: 3px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.search-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+        &[type="submit"] {
+            background-color: #303134;
+            border: 1px solid #303134;
+            border-radius: 4px;
+            color: #e8eaed;
+            line-height: 27px;
+            font-size: 14px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            margin: 11px 4px;
+            padding: 0 20px;
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid #737a78;
+            }
+        }
+    }
+}
+
+
+form {
+    padding: 20px;
+}
+
+a {
+    float: right;
+    padding: 0 5px;
+    color: $text-color;
+
+    &:link {
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
